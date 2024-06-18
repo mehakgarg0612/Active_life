@@ -1,0 +1,746 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+.social-icons a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+header {
+  background: linear-gradient(to right, #4CAF50, #FFC107);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: #000;
+  /* Change to the desired hover color */
+}
+
+/* Add this CSS for the dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+  /* Add transition effect */
+  opacity: 0;
+  /* Hide initially */
+  pointer-events: none;
+  /* Hide initially */
+}
+
+/* Position the dropdown content for "Services" */
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  /* Show on hover */
+  pointer-events: auto;
+  /* Show on hover */
+}
+
+/* Position the dropdown content for "Shop" */
+.dropdown-shop:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  /* Show on hover */
+  pointer-events: auto;
+  /* Show on hover */
+  right: 0;
+  /* Align to the right edge */
+}
+
+/* Add down arrow */
+.dropdown>a:after {
+  content: " \25BE";
+  display: inline-block;
+  /* Ensure the down arrow displays properly */
+  margin-left: 5px;
+  /* Add a bit of space between the link text and arrow */
+}
+
+/* Ensure dropdown content stays visible on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* CSS for the dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Ensure dropdown content stays visible on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  /* Set slide height to full viewport height */
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;/
+}
+
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  text-align: left;
+  font-size: 36px;
+  color: #fff
+}
+
+/* CSS for the slide text */
+.slide-text h2 span {
+  background: linear-gradient(to bottom right, #45a049, yellow);
+  /* Gradient background */
+  -webkit-background-clip: text;
+  /* Apply gradient to text */
+  color: transparent;
+  /* Make text transparent */
+}
+.join-us-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  /* Transform text to uppercase */
+  background-color: transparent;
+  color: transparent;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #4CAF50, #FFC107);
+  /* Add gradient to border */
+  border-image-slice: 1;
+  /* Ensure gradient covers the entire border */
+  border-radius: 5px;
+  cursor: pointer;
+  background-clip: padding-box;
+  background-image: linear-gradient(to right, #4CAF50, #FFC107);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  outline: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border-image 0.3s;
+  /* Add border-image to transition */
+}
+
+.join-us-btn:hover {
+  background-image: linear-gradient(to right, #FFC107, #4CAF50);
+  /* Change inner gradient on hover */
+  color: #fff;
+  /* Change text color on hover */
+}
+
+
+/* Show first slide by default */
+.carousel-slide:first-child {
+  display: block;
+}
+
+/* CSS for the trial section */
+.trial-section {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* CSS for the form */
+.trial-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input[type="email"] {
+  padding: 15px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+button[type="submit"] {
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 18px;
+  background-image: linear-gradient(to right, #4CAF50, #FFC107);
+  /* Gradient background */
+  text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+  background-image: linear-gradient(to right, #45a049, #FFC107);
+  /* Darker shade of green on hover */
+}
+
+hr {
+  margin: 0 auto;
+  width: 80%;
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #4CAF50, #FFC107);
+}
+
+/* CSS for the plan cards */
+.our-plans {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+@media (max-width: 768px) {
+  .plan-card {
+    width: calc(50% - 20px); /* Adjust the percentage as needed */
+  }
+}
+
+/* Media query for screens up to 564px width */
+@media (max-width: 564px) {
+  .plan-card {
+    width: calc(100% - 20px); /* Adjust the percentage as needed */
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.our-plans h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.plan-cards {
+  display: flex;
+  justify-content: center;
+
+}/* Default styles */
+.our-plan-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.plan-card {
+  width: calc(50% - 20px); /* Two cards per row by default */
+  margin-bottom: 20px;
+}
+
+/* Media query for screens up to 564px width */
+@media (max-width: 564px) {
+  .plan-card {
+    width: calc(100% - 20px); /* Single card per row */
+  }
+}
+
+/* Media query for screens between 564px and 768px width */
+@media (min-width: 565px) and (max-width: 768px) {
+  .plan-card {
+    width: calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+
+.plan-card {
+  background: linear-gradient(to bottom right, #4CAF50, #FFC107);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: calc(25% - 20px);
+  margin: 10px;
+}
+
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+  /* Text color */
+}
+
+.plan-card p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+  /* Text color */
+}
+
+.view-benefit-btn {
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-benefit-btn:hover {
+  opacity: 0.8; /* Reduced opacity on hover */
+}
+
+.trainer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.trainer-card {
+  flex: 0 0 calc(30% - 20px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+
+}
+@media (max-width: 768px) {
+  .trainer-card {
+    flex-basis: calc(50% - 20px); /* Adjust the percentage as needed */
+  }
+}
+
+
+.trainer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trainer-name {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.trainer-details {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  transition: opacity 0.5s ease;
+}
+
+.trainer-card:hover .trainer-details {
+  opacity: 1;
+}
+
+.challenge-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.challenge-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.challenge-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.challenge-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.challenge-details {
+  padding: 20px;
+}
+
+.challenge-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.challenge-description {
+  font-size: 16px;
+  color: #666;
+}
+
+.challenge-button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: transparent;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #4CAF50, #FFC107);
+  border-image-slice: 1;
+  border-radius: 5px;
+  cursor: pointer;
+  background-clip: padding-box;
+  background-image: linear-gradient(to right, #4CAF50, #FFC107);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  outline: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border-image 0.3s;
+}
+
+
+
+.testimonial-section {
+  padding: 50px 0;
+}
+
+.testimonial-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.testimonial-card {
+  width: calc(30% - 20px);
+  /* Adjust the width as needed */
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-profile {
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.testimonial-details {
+  padding: 20px;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+}
+
+.gallery-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: transform 0.3s ease-in-out; 
+}
+.gallery img:hover {
+  transform: scale(1.05); /* Enlarge on hover */
+}
+
+.video-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.videos iframe {
+  width: 100%;
+  max-height: 500px; /* Adjust this value as needed */
+}
+
+.schedule-section {
+  padding: 50px 0;
+}
+
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.schedule th {
+  background: linear-gradient(45deg, #4CAF50, #FFC107);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto 40px; /* Added margin from bottom */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand-info,
+.quick-links,
+.contact-info {
+  flex-basis: 30%;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+ 
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+}
+
+@media only screen and (min-width: 1201px) {
+  
+}

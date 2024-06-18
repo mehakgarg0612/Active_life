@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/7edbb1c9c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <style>
+    .logo {
+    font-size: 28px;
+    color: #fff;
+}
+  </style>
+    <div class="navbar">
+        <div class="contact-info">
+          <span>Contact: +91 9874 456 123</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#"><i class="fab fa-instagram" style="color: #bc2a8d;"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook" style="color: #3b5998;"></i></a></li>
+            <li><a href="#"><i class="fas fa-times" style="color: #fff;"></i></a></li>
+            <li class="email-icon"><a href="#"><i class="far fa-envelope" style="color: #999;"></i></a></li>
+          </ul>
+      </div>
+      <header>
+        <div class="logo">Fitness <span>Club</span></div>
+        <nav>
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'services' %}" target="_blank">Services</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li class="dropdown">
+              <a href="{%url 'membership' %}" class="dropbtn">Membership</a>
+              <div class="dropdown-content">
+                  <a href="{% url 'silver_membership' %}">Silver</a>
+                  <a href="{% url 'gold_membership' %}">Gold</a>
+                  <a href="#">Platinum</a>
+                  <a href="#">Diamond</a>
+              </div>
+          </li>
+            <li><a href="{% url 'contactus' %}">Contact</a></li>
+            <li class="dropdown dropdown-shop">
+              <a href="{% url 'shop' %}" target="_blank">Shop</a>
+              <div class="dropdown-content">
+                <a href="{% url 'shop' %}#gymequip">Gym Equipment</a>
+                <a href="{% url 'shop' % }#dietproducts">Diet Products</a>
+                <a href="{% url 'shop' %}#proteinbars">Protein Bars</a>
+                <a href="{% url 'shop' %}#shakes">Shakes</a>
+                <a href="#">Nutritional Supplements</a>
+              </div>
+            </li>
+            {% if request.user.is_authenticated %}
+        <div class="dropdown">
+            <button class="dropbtn">{{ request.user.username }}</button>
+            <div class="dropdown-content">
+                <a href="#">My Profile</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+        </div>
+        {% else %}
+        <div class="signup-login">
+            <a href="{% url 'signup' %}">Sign Up</a>
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+        {% endif %}
+          </ul>
+        </nav>
+      </header>
+</body>
+</html>

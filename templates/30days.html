@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30-Day Fitness Challenge</title>
+<style>
+    /* Styles for the challenge card */
+    .challenge-card {
+        display: flex;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .challenge-details {
+        flex: 2;
+        padding: 20px;
+        color: #333;
+    }
+
+    .challenge-title {
+        font-size: 24px;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 10px;
+    }
+
+    .challenge-description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .challenge-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .challenge-table th,
+    .challenge-table td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .challenge-table th {
+        background-color: #f9f9f9;
+        font-weight: bold;
+    }
+
+    .challenge-button {
+        display: inline-block;
+        background-color: #4caf50;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-weight: bold;
+    }
+
+    .challenge-button:hover {
+        background-color: #45a049;
+    }
+
+    /* Styles for the pop-up */
+    .popup-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        max-width: 400px;
+        text-align: center;
+        position: relative;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="challenge-card">
+    <div class="challenge-details">
+        <h3 class="challenge-title">30-Day Fitness Challenge</h3>
+        <p class="challenge-description">Take on our 30-day fitness challenge and transform your body and mind with daily workouts and nutrition tips.</p>
+        <table class="challenge-table" style="float: left; width: 50%;">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Activity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>20-minute brisk walk</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>15 push-ups, 20 sit-ups</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Yoga session for flexibility</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>30-minute jog</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>HIIT workout (15 minutes)</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Rest day - Stretch and relax</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>20-minute cycling</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>25 squats, 15 lunges (each leg)</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Full-body strength training</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Pilates session</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>20-minute jump rope</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>30-minute swim</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Rest day - Gentle yoga</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>High-intensity cardio workout (20 minutes)</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>30-minute bike ride</td>
+                </tr>
+            <tbody>
+            </table>
+            <table class="challenge-table" style="float: right; width: 50%;">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>16</td>
+                    <td>Upper body strength training</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Core workout (planks, crunches)</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>20-minute stair climbing</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Full-body circuit training</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Yoga for balance and stability</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>25-minute run</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>30-minute dance workout</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Rest day - Meditation and deep breathing</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>20-minute HIIT session</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Lower body strength training</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Pilates for core strength</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>15-minute rowing machine</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>30-minute hike</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Cardio kickboxing (15 minutes)</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Celebrate your progress!</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="clear: both;"></div><br><br>
+        <div style="clear: both;"></div><br><br>
+        <a href="#" onclick="showPopup()" class="challenge-button">Join Now</a>
+    </div>
+</div>
+
+<!-- Pop-up container -->
+<div class="popup-container" id="popupContainer">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>Are you ready to join the fitness challenge?</h2>
+        <a href="{% url 'success_join_challenge' %}" class="challenge-button">OK</a>
+    </div>
+</div>
+
+<script>
+    // Function to show the pop-up
+    function showPopup() {
+        var popup = document.getElementById('popupContainer');
+        popup.style.display = 'flex';
+    }
+
+    // Function to close the pop-up
+    function closePopup() {
+        var popup = document.getElementById('popupContainer');
+        popup.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

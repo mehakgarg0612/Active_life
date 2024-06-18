@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://kit.fontawesome.com/7edbb1c9c4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>HOME</title>
+
+
+  <title>Fitness club</title>
+</head>
+<style>
+  .active {
+    color: black
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Metal+Mania&display=swap');
+  .logo {
+    font-family: "Amita", serif;
+  font-weight: 700;
+  font-style: normal;
+
+  }
+</style>
+
+<body>
+  {% include 'header.html'%}
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="{% static '/images/1.jpg' %}" alt="Image 1">
+      <div class="slide-text">
+        <h2>IT'S GYM TIME. LET'S GO
+          <br><span>WE ARE READY TO FIT YOU </span>
+        </h2>
+        <p>Your journey to a healthier lifestyle starts here.</p>
+      </div>
+    </div>
+
+    <a href="{% url 'signup' %}" class="join-us-btn">Join Us</a>
+
+  </div>
+
+  <section class="trial-section">
+    <div class="container">
+        <h2>Get Your First Trial</h2>
+        <form action="{% url 'reach' %}" method="post" class="trial-form">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+  <hr>
+  <section class="our-plans">
+    <div class="container">
+        <h2>Our Plans</h2>
+        <div class="plan-cards">
+            <div class="plan-card one-month">
+                <h3>One Month Plan</h3>
+                <p>₹700/month</p>
+                <p>Access to all facilities</p>
+                <a href="{% url 'membership' %}" class="view-benefit-btn">View Benefit</a>
+            </div>
+            <div class="plan-card three-month">
+                <h3>Three Month Plan</h3>
+                <p>₹1500/3 months</p>
+                <p>Access to all facilities</p>
+                <a href="{% url 'membership' %}" class="view-benefit-btn">View Benefit</a>
+            </div>
+            <div class="plan-card six-month">
+                <h3>Six Month Plan</h3>
+                <p>₹2500/6 months</p>
+                <p>Access to all facilities</p>
+                <a href="{% url 'membership' %}" class="view-benefit-btn">View Benefit</a>
+            </div>
+            <div class="plan-card one-year">
+                <h3>One Year Plan</h3>
+                <p>₹4000/year</p>
+                <p>Access to all facilities</p>
+                <a href="{% url 'membership' %}" class="view-benefit-btn">View Benefit</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <hr>
+  <section class="our-trainers">
+    <div class="container">
+      <h2>Our Most Experienced Trainers</h2>
+      <div class="trainer-cards">
+        <div class="trainer-card">
+          <img src="{% static '/images/trainer1.jpg' %}" alt="Trainer 1" class="trainer-image">
+          <div class="trainer-name">John Doe</div>
+          <div class="trainer-details">
+            <p>John Doe has over 10 years of experience in personal training. Specializes in weightlifting and
+              bodybuilding.</p>
+          </div>
+        </div>
+        <div class="trainer-card">
+          <img src="{% static '/images/t2.jpg' %}" alt="Trainer 2" class="trainer-image">
+          <div class="trainer-name">Jane Smith</div>
+          <div class="trainer-details">
+            <p>Jane Smith is a certified yoga instructor with a passion for helping others achieve mental and physical
+              well-being.</p>
+          </div>
+        </div>
+        <div class="trainer-card">
+          <img src="{% static '/images/t3.jpg' %}" alt="Trainer 3" class="trainer-image">
+          <div class="trainer-name">Mike Johnson</div>
+          <div class="trainer-details">
+            <p>Mike Johnson is a professional boxer with several championship titles. Offers specialized boxing training
+              for all levels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><br><br>
+  <hr>
+  <section class="challenge-section">
+    <div class="container">
+      <h2 class="challenge-heading">Join Our Fitness Challenges</h2>
+      <div class="challenge-cards">
+        <div class="challenge-card">
+          <img src="{% static '/images/healthy (1).jpg' %}" alt="Challenge 1" class="challenge-image">
+          <div class="challenge-details">
+            <h3 class="challenge-title">30-Day Fitness Challenge</h3>
+            <p class="challenge-description">Take on our 30-day fitness challenge and transform your body and mind with
+              daily workouts and nutrition tips.</p>
+              <a href="{% url 'thirty_day_challenge' %}" class="challenge-button">Join Now</a>
+          </div>
+        </div>
+        <div class="challenge-card">
+          <img src="{% static '/images/healthy (6).jpg' %}" alt="Challenge 2" class="challenge-image">
+          <div class="challenge-details">
+            <h3 class="challenge-title">Healthy Eating Challenge</h3>
+            <p class="challenge-description">Commit to healthier eating habits with our healthy eating challenge
+              featuring meal plans, recipes, and nutrition tips.</p>
+              <a href="{% url 'eating' %}" class="challenge-button">Join Now</a>
+          </div>
+        </div>
+        <div class="challenge-card">
+          <img src="{% static '/images/healthy (4).jpg' %}" alt="Challenge 3" class="challenge-image">
+          <div class="challenge-details">
+            <h3 class="challenge-title">Cardio Challenge</h3>
+            <p class="challenge-description">Challenge yourself with our cardio challenge and improve your
+              cardiovascular health with fun and effective workouts.</p>
+              <a href="{% url 'thirty_day_challenge' %}" class="challenge-button">Join Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="testimonial-section">
+    <div class="container">
+      <h2 class="testimonial-heading">Member Experiences</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <div class="testimonial-profile">
+            <img src="{% static '/images/user (2).jpg' %}" alt="User 1" class="profile-image">
+          </div>
+          <div class="testimonial-details">
+            <p class="testimonial-text">"I joined Fitness World a few months ago, and it has been an incredible journey!
+              The trainers are knowledgeable and supportive, and I've seen amazing results in my fitness level. Highly
+              recommended!"</p>
+            <p class="testimonial-author">- Emily Johnson</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-profile">
+            <img src="{% static '/images/user (1).jpg' %}" alt="User 2" class="profile-image">
+          </div>
+          <div class="testimonial-details">
+            <p class="testimonial-text">"Fitness World has completely changed my perspective on fitness. The classes are
+              fun and challenging, and the community is so motivating. I've never felt better both physically and
+              mentally!"</p>
+            <p class="testimonial-author">- Mark Davis</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-profile">
+            <img src="{% static '/images/femleuser.jpg' %}" alt="User 2" class="profile-image">
+          </div>
+          <div class="testimonial-details">
+            <p class="testimonial-text">"Fitness World has completely changed my perspective on fitness. The classes are
+              fun and challenging, and the community is so motivating. I've never felt better both physically and
+              mentally!"</p>
+            <p class="testimonial-author">- Mark Davis</p>
+          </div>
+        </div>
+        <!-- Add more testimonial cards here -->
+      </div>
+    </div>
+  </section> <br><br>
+  <hr>
+  <section class="gallery-section">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="{% static '/images/gymeqi1.jpg' %}" alt="Image 1">
+        <img src="{% static '/images/gymepi2.jpg' %}" alt="Image 2">
+        <img src="{% static '/images/gymepi3.jpg' %}" alt="Image 3">
+        <!-- Add more images here -->
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="video-section">
+    <div class="container">
+      <h2>Videos</h2>
+      <div class="videos">
+        <iframe width="560" height="315" src="/static/vedioa/gym.mp4" frameborder="0"
+          allowfullscreen></iframe>
+        <iframe width="560" height="315" src="/static/vedioa/gym1.mp4" frameborder="0"
+          allowfullscreen></iframe>
+        <!-- Add more video embeds here -->
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="schedule-section">
+    <div class="container">
+      <h2>Class Schedule</h2>
+      <table class="schedule">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7:30 AM</td>
+            <td>Running</td>
+            <td></td>
+            <td>Yoga</td>
+            <td>Running</td>
+            <td>Yoga</td>
+            <td>Running</td>
+          </tr>
+          <tr>
+            <td>8:00 AM</td>
+            <td>Yoga</td>
+            <td></td>
+            <td>Cardio</td>
+            <td></td>
+            <td>Yoga</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>9:30 AM</td>
+            <td></td>
+            <td>Boxing</td>
+            <td></td>
+            <td>Boxing</td>
+            <td></td>
+            <td>Boxing</td>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td>Cardio</td>
+            <td></td>
+            <td>Weight Lifting</td>
+            <td></td>
+            <td>Cardio</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>12:00 PM</td>
+            <td>Weight Lifting</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Weight Lifting</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {% include 'footer.html'%}
+</body>
+
+</html> `

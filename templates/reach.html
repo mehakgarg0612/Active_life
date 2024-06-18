@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-4/f4I8z3aUJD1PwGuVjUHwlPUpF00GkIAjBTp+RiNRfvN4k1Gzv30rbwXjbTyhxp0A3wFQ7UfwUd2kiS3QTZ/w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .thank-you-message {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .home-link {
+        display: block;
+        font-size: 20px;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #4caf50;
+    }
+
+    .home-link:hover {
+        color: #45a049;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="thank-you-message">
+            Thank you for your interest!
+        </div>
+        <p>We will reach out to you soon.</p>
+        <a href="{% url 'home' %}" class="home-link">Go back to home</a>
+    </div>
+</body>
+</html>

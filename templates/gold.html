@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Membership</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .gold-membership {
+            background: linear-gradient(to right, #1a1a1a, #333);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; /* Added to align content vertically */
+        }
+
+        .content {
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .become-member-button,
+        .home-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 20px; /* Added margin to separate the buttons */
+        }
+
+        .become-member-button:hover,
+        .home-button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="gold-membership">
+        <div class="content">
+            <h1>Gold Membership</h1>
+            <p>Upgrade to our Gold Membership to enjoy exclusive benefits:</p>
+            <ul>
+                <li>Full gym access</li>
+                <li>Access to group fitness classes</li>
+                <li>Personal Trainer Sessions</li>
+            </ul>
+            <a href="{% url 'success_gold' %}" class="become-member-button">Become a Gold Member</a>
+            <a href="{% url 'home' %}" class="home-button">Go Back to Home</a>
+        </div>
+    </div>
+</body>
+
+</html>

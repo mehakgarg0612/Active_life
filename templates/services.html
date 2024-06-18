@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7edbb1c9c4.js" crossorigin="anonymous"></script>
+    <title>services</title>
+</head>
+<style>
+    .active{
+        color: black;
+    }
+    .fullwidth {
+
+        width: 100%;
+        height: 150px;
+        /* Adjust this value as per your requirement */
+        background-color: lightgray;
+        color: black;
+        position: relative;
+        /* Add position relative to position the text */
+    }
+
+    .fullwidth img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        display: block;
+        object-fit: cover;
+        filter: blur(2px);
+
+    }
+
+    .fullwidth h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        z-index: 1;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .our-services {
+        padding: 40px 0;
+        background-color: #f9f9f9;
+    }
+
+    .our-services .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .our-services h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .service-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .service-card {
+        width: 250px;
+        margin: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-image {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .service-name {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .service-details {
+        padding: 0 20px 20px;
+        text-align: center;
+        color: #666;
+    }
+</style>
+
+<body>
+  {% include 'header.html'%}
+    <div class="fullwidth">
+        <img src="{% static '/images/services.jpg' %}" alt="">
+        <h1 style="text-align: center;">our services</h1>
+    </div>
+    <section class="our-services">
+        <div class="container">
+            <div class="service-cards">
+                <div class="service-card">
+                    <img src="{% static '/images/yoga.jpg' %}" alt="Yoga" class="service-image">
+                    <div class="service-name">Yoga</div>
+                    <div class="service-details">
+                        <p>Join our yoga classes and experience mental and physical well-being.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{% static '/images/running.jpg' %}" alt="Running" class="service-image">
+                    <div class="service-name">Running</div>
+                    <div class="service-details">
+                        <p>Take part in our running sessions and improve your cardiovascular health.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{% static '/images/boxing.jpg' %}" alt="Boxing" class="service-image">
+                    <div class="service-name">Boxing</div>
+                    <div class="service-details">
+                        <p>Learn boxing techniques from our professional trainers and get in shape.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{% static '/images/weight.jpg' %}" alt="Weightlifting" class="service-image">
+                    <div class="service-name">Weightlifting</div>
+                    <div class="service-details">
+                        <p>Get involved in weightlifting and sculpt your body with our expert guidance.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{% static '/images/cardio.jpg' %}" alt="Cardio" class="service-image">
+                    <div class="service-name">Cardio</div>
+                    <div class="service-details">
+                        <p>Participate in cardio workouts tailored to your fitness level and achieve your goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'footer.html'%}
+    
+
+</body>
+
+</html>

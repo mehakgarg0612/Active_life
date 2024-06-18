@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://kit.fontawesome.com/7edbb1c9c4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Shop</title>
+    <style>
+        .active{
+            color: black;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product-section {
+            margin-bottom: 50px; /* Added spacing between sections */
+        }
+
+        .product-section h2 {
+            text-align: center;
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product-item {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product-item .buy-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-item .buy-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html'%}
+    <div class="container">
+        <div class="product-section" id="proteinbars">
+            <h2>Protein Bars</h2>
+            <div class="product">
+                <div class="product-item">
+                    <img src="{% static '/images/bar.jpg' %}" alt="Protein Bars">
+                    <h3>Protein Bars</h3>
+                    <p>₹10</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="{% static '/images/bar.jpg' %}" alt="Protein Bars">
+                    <h3>Protein Bars</h3>
+                    <p>₹145</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="{% static '/images/bar1.jpg' %}" alt="Protein Bars">
+                    <h3>Protein Bars</h3>
+                    <p>₹170</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="{% static '/images/bar.jpg' %}" alt="Protein Bars">
+                    <h3>Protein Bars</h3>
+                    <p>₹100</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                
+            </div>
+        </div>
+        <hr>
+
+        <div class="product-section" id="shakes">
+            <h2>Shakes</h2>
+            <div class="product">
+                <div class="product-item">
+                    <img src="{% static '/images/protein (1).jpg' %}" alt="Shakes">
+                    <h3>Shakes</h3>
+                    <p>₹15</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="{% static '/images/protein (2).jpg' %"} alt="Shakes">
+                    <h3>Shakes</h3>
+                    <p>₹15</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="{% static '/images/protein (3).jpg' %"} alt="Shakes">
+                    <h3>Shakes</h3>
+                    <p>₹15</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                
+            </div>
+        </div>
+        <hr>
+
+        <div class="product-section" id="dietproducts">
+            <h2>Diet Products</h2>
+            <div class="product">
+                <div class="product-item">
+                    <img src="/images/" alt="Diet Products">
+                    <h3>Diet Products</h3>
+                    <p>₹20</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="{% static '/images/bar.jpg' %}" alt="Diet Products">
+                    <h3>Diet Products</h3>
+                    <p>₹20</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="{% static 'diet-products.jpg' %}" alt="Diet Products">
+                    <h3>Diet Products</h3>
+                    <p>₹20</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="product-section" id="gymequip">
+            <h2>Gym Equipment</h2>
+            <div class="product">
+                <div class="product-item">
+                    <img src="{% static '/images/gymepi3.jpg' %}" alt="Gym Equipment">
+                    <h3>Gym Equipment</h3>
+                    <p>₹50</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="{% static 'gym-equipment.jpg' %}" alt="Gym Equipment">
+                    <h3>Gym Equipment</h3>
+                    <p>₹50</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="{% static 'gym-equipment.jpg' %}" alt="Gym Equipment">
+                    <h3>Gym Equipment</h3>
+                    <p>₹50</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="{% static 'gym-equipment.jpg' %}" alt="Gym Equipment">
+                    <h3>Gym Equipment</h3>
+                    <p>₹50</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html'%}
+</body>
+
+</html>

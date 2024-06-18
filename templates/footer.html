@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/7edbb1c9c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="brand-info">
+        <h3>Fitness Club</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="far fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="quick-links">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="{% url 'home' %}" style="color: white;">Home</a></li>
+          <li><a href="{% url 'about' %}" style="color: white;">About Us</a></li>
+          <li><a href="{% url 'services'%}" style="color: white;">Services</a></li>
+          <li><a href="{% url 'contactus' %}" style="color: white;">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>123 Fitness Street, City, Country</p>
+        <p>Email: info@fitnessclub.com</p>
+        <p>Phone: +1 123-456-7890</p>
+      </div>
+      <div class="cta">
+        <a href="#" class="btn">Join Now</a>
+      </div>
+    </div>
+  </footer>
+  <style>
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 50px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .brand-info,
+    .quick-links,
+    .contact-info,
+    .cta {
+      flex-basis: 25%;
+      padding: 10px 20px; 
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 15px; /* Add some space below icons */
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin-right: 10px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #bc2a8d; /* Add hover effect for social icons */
+    }
+
+    .cta {
+      text-align: center; 
+    }
+
+    .cta .btn {
+      background-color: #bc2a8d; 
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer; 
+    }
+
+    .cta .btn:hover {
+      background-color: #a6277e 
+    }
+
+    .footer-links a {
+      color: white; 
+      text-decoration: none;
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Wise Eating Routine</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-4/f4I8z3aUJD1PwGuVjUHwlPUpF00GkIAjBTp+RiNRfvN4k1Gzv30rbwXjbTyhxp0A3wFQ7UfwUd2kiS3QTZ/w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/7edbb1c9c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+
+    .challenge-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .challenge-details {
+        padding: 20px;
+    }
+
+    .challenge-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .challenge-description {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .home-logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .join-button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .join-button {
+        display: inline-block;
+        background-color: #4caf50;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .join-button:hover {
+        background-color: #45a049;
+    }
+
+</style>
+<body>
+    <a class="home-logo" href="{% url 'home' %}">
+        <i class="fas fa-home"></i>
+    </a>
+    <div class="container">
+        <div class="challenge-card">
+            <div class="challenge-details">
+                <h3 class="challenge-title">Day 1</h3>
+                <div class="challenge-description">
+                    <strong>Morning:</strong> Breakfast: Scrambled eggs with spinach and whole grain toast<br><br>
+                    <strong>Evening:</strong> Lunch: Grilled chicken salad with mixed greens and balsamic vinaigrette<br><br>
+                    <strong>Night:</strong> Dinner: Baked salmon with quinoa and steamed asparagus
+                </div>
+            </div>
+        </div>
+        <div class="challenge-card">
+            <div class="challenge-details">
+                <h3 class="challenge-title">Day 2</h3>
+                <div class="challenge-description">
+                    <strong>Morning:</strong> Breakfast: Overnight oats with almond milk and sliced strawberries<br>
+                    <strong>Evening:</strong> Lunch: Turkey and avocado wrap with whole wheat tortilla<br>
+                    <strong>Night:</strong> Dinner: Stir-fried shrimp with brown rice and mixed vegetables
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-details">
+                <h3 class="challenge-title">Day 3</h3>
+                <div class="challenge-description">
+                    <strong>Morning:</strong> Breakfast: Greek yogurt with honey and walnuts<br>
+                    <strong>Evening:</strong> Lunch: Caprese salad with fresh mozzarella, tomatoes, and basil<br>
+                    <strong>Night:</strong> Dinner: Grilled portobello mushrooms with quinoa and roasted peppers
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-details">
+                <h3 class="challenge-title">Day 4</h3>
+                <div class="challenge-description">
+                    <strong>Morning:</strong> Breakfast: Whole grain toast with almond butter and sliced bananas<br>
+                    <strong>Evening:</strong> Lunch: Chickpea salad with cucumber, tomato, and lemon-tahini dressing<br>
+                    <strong>Night:</strong> Dinner: Baked cod with herbed couscous and steamed green beans
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-details">
+                <h3 class="challenge-title">Day 5</h3>
+                <div class="challenge-description">
+                    <strong>Morning:</strong> Breakfast: Smoothie with spinach, pineapple, and coconut milk<br>
+                    <strong>Evening:</strong> Lunch: Lentil soup with whole grain bread<br>
+                    <strong>Night:</strong> Dinner: Grilled chicken breast with sweet potato mash and sautéed kale
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="join-button-container">
+        <a href="{% url 'success_join_challenge' %}" class="join-button">Join Now</a>
+    </div>
+
+</body>
+</html>
